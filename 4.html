@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
 Необязательное задание.
 
 Необходимо от пользователя получить число.
@@ -25,10 +25,17 @@
 
 Уточнение: пользователь всегда вводит корректное положительное число.
 -->
-<script>
-  "use strict";
+    <script>
+      "use strict";
+      const num = +prompt("Введите число");
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
-</body>
+      const a = num % 10;
+      const b = Math.trunc(num / 10) % 10;
+      const c = Math.trunc(num / 100) % 10;
+
+      console.log(
+        `В числе ${num}: количество сотен: ${c}, десятков:${b}, единиц: ${a}`
+      );
+    </script>
+  </body>
 </html>
